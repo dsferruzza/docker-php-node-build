@@ -16,6 +16,7 @@ RUN echo "deb https://deb.nodesource.com/node_5.x jessie main" > /etc/apt/source
 # Install tools
 RUN apt-get update \
  && apt-get install -y \
+ bzip2 \
  git \
  php5-cli \
  nodejs
