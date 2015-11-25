@@ -18,6 +18,7 @@ RUN apt-get update \
  && apt-get install -y \
  git \
  php5-cli \
+ nodejs \
  nodejs-legacy
 
 # Show versions
