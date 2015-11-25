@@ -18,8 +18,8 @@ RUN apt-get update \
  && apt-get install -y \
  git \
  php5-cli \
- nodejs \
- nodejs-legacy
+ nodejs
+RUN ln -f -s /usr/bin/nodejs /usr/bin/node
 
 # Show versions
 RUN php -v
