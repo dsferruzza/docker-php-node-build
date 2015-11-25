@@ -17,11 +17,11 @@ RUN apt-get update \
  && apt-get install -y \
  git \
  php5-cli \
- nodejs
+ nodejs-legacy
 
 # Show versions
 RUN php -v
-RUN nodejs -v
+RUN node -v
 RUN npm -v
 
 # Install composer
