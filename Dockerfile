@@ -3,6 +3,7 @@ MAINTAINER David Sferruzza <david.sferruzza@gmail.com>
 
 # Let the conatiner know that there is no tty
 ENV DEBIAN_FRONTEND noninteractive
+ENV COMPOSER_NO_INTERACTION 1
 
 # Add Node.js repo
 RUN apt-get update \
