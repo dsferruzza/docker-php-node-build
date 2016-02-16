@@ -16,6 +16,7 @@ RUN apt-get update \
 # Install tools
  && apt-get update \
  && apt-get install --no-install-recommends -y \
+ openssh-client \
  bzip2 \
  git \
  php5-cli \
