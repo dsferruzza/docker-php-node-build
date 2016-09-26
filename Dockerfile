@@ -1,4 +1,4 @@
-FROM debian:8.3
+FROM debian:8.6
 MAINTAINER David Sferruzza <david.sferruzza@gmail.com>
 
 # Let the conatiner know that there is no tty
