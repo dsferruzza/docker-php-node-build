@@ -1,4 +1,4 @@
-FROM debian:8.6
+FROM debian:8.9
 MAINTAINER David Sferruzza <david.sferruzza@gmail.com>
 
 # Let the conatiner know that there is no tty
@@ -11,8 +11,9 @@ RUN apt-get update \
  curl \
  apt-transport-https \
  ca-certificates \
+ gnupg2 \
  && curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - \
- && echo "deb https://deb.nodesource.com/node_6.x jessie main" > /etc/apt/sources.list.d/nodesource.list \
+ && echo "deb https://deb.nodesource.com/node_8.x jessie main" > /etc/apt/sources.list.d/nodesource.list \
 # Install tools
  && apt-get update \
  && apt-get install --no-install-recommends -y \
@@ -21,7 +22,6 @@ RUN apt-get update \
  git \
  php5-cli \
  nodejs \
- && ln -f -s /usr/bin/nodejs /usr/bin/node \
  # Slim down image
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/man/?? /usr/share/man/??_*
